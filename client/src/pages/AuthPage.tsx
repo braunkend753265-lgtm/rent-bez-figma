@@ -1,0 +1,24 @@
+/** Figma fidelity: светлый интерфейс Аренда БЕЗ; центральная адаптивная AuthForm с табами, валидацией и честным demo-success. */
+import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { useState } from "react";
+import { useLocation } from "wouter";
+import { AppShell } from "@/components/AppShell";
+import { Seo } from "@/components/Seo";
+
+type AuthMode = "login" | "register";
+
+export default function AuthPage() {
+  const [location, navigate] = useLocation();
+  const initialMode: AuthMode = new URLSearchParams(window.location.search).get("mode") === "register" ? "register" : "login";
+  const [mode, setMode] = useState<AuthMode>(initialMode);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  function changeMode(next: AuthMode) { setMode(next); setError(""); setSuccess(false); navigate(`/auth?mode=${next}`, { replace: true }); }
+  function submit(event: React.FormEvent<HTMLFormElement>) { event.preventDefault(); if (phone.replace(/\D/g, "").length < 10 || (mode === "register" && (name.trim().length < 2 || !consent))) { setError(mode === "register" ? "Заполните имя, телефон и подтвердите согласие." : "Введите номер телефона в полном формате."); return; } setError(""); setSuccess(true); }
+
+  return <AppShell><Seo title={mode === "login" ? "Вход в аккаунт" : "Регистрация"} description="Вход и регистрация в Аренде БЕЗ: клиентская форма без хранения персональных данных." /><section className="auth-page"><div className="auth-card">{success ? <div className="auth-success"><CheckCircle2 size={42} /><p className="eyebrow">Данные проверены</p><h1>{mode === "login" ? "Вход подготовлен" : "Профиль подготовлен"}</h1><p>Это демонстрационное состояние интерфейса. Код по SMS не отправлялся, а данные не сохранены: для настоящего входа потребуется защищённый серверный сервис.</p><button className="button button--primary button--wide" onClick={() => navigate(mode === "register" ? "/owner" : "/search")}>Продолжить <ArrowRight size={16} /></button></div> : <form onSubmit={submit} noValidate><p className="eyebrow">Единый аккаунт</p><h1>{mode === "login" ? "Войти в аккаунт" : "Создать аккаунт"}</h1><p className="auth-lead">Сохраняйте поиск, заявки и статусы в одном месте.</p><div className="auth-tabs" role="tablist" aria-label="Режим доступа"><button type="button" role="tab" aria-selected={mode === "login"} className={mode === "login" ? "is-active" : ""} onClick={() => changeMode("login")}>Войти</button><button type="button" role="tab" aria-selected={mode === "register"} className={mode === "register" ? "is-active" : ""} onClick={() => changeMode("register")}>Регистрация</button></div>{mode === "register" && <><label className="field-label" htmlFor="auth-name">Имя</label><input id="auth-name" value={name} onChange={(event) => setName(event.target.value)} autoComplete="name" placeholder="Как к вам обращаться" /></>}<label className="field-label" htmlFor="auth-phone">Номер телефона</label><div className="phone-input"><Phone size={17} aria-hidden="true" /><input id="auth-phone" inputMode="tel" autoComplete="tel" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="+7 900 000-00-00" /></div><p className="auth-explain">Мы использовали бы номер только для одноразового кода и связи по заявке.</p>{mode === "register" && <label className="checkbox-field"><input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} /><span>Согласен с условиями сервиса и обработкой данных для создания профиля</span></label>}{error && <p className="field-error" role="alert">{error}</p>}<button type="submit" className="button button--primary button--wide">{mode === "login" ? "Получить код" : "Создать аккаунт"} <ArrowRight size={16} /></button><p className="form-note">В текущей frontend-версии SMS не отправляется и информация не сохраняется.</p></form>}</div></section></AppShell>;
+}

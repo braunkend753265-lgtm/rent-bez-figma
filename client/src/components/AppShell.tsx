@@ -5,7 +5,13 @@ import { useEffect, useId, useState } from "react";
 
 const logoUrl = "/manus-storage/rentbez-logo_db53fdec.png";
 
-export function AppShell({ children }: { children: React.ReactNode }) {
+export function AppShell({
+  children,
+  variant = "public",
+}: {
+  children: React.ReactNode;
+  variant?: "public" | "auth";
+}) {
   const [open, setOpen] = useState(false);
   const [location] = useLocation();
   const menuId = useId();
@@ -22,7 +28,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }, [open]);
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell app-shell--${variant}`}>
       <header className="site-header">
         <div className="site-header__inner">
           <Link href="/search" className="brand" aria-label="Аренда БЕЗ: перейти к поиску">
@@ -57,6 +63,23 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         )}
       </header>
       <main>{children}</main>
+      {variant === "public" && (
+        <footer className="site-footer">
+          <div className="site-footer__inner">
+            <div className="site-footer__brand">
+              <Link href="/search" className="brand" aria-label="Аренда БЕЗ: перейти к поиску">
+                <img src={logoUrl} width="32" height="32" alt="" className="brand__mark" />
+                <span className="brand__name">Аренда БЕЗ</span>
+              </Link>
+              <p>Аренда жилья с понятными условиями и сервисной поддержкой.</p>
+            </div>
+            <div><strong>Арендаторам</strong><Link href="/search">Найти квартиру</Link><Link href="/rent">Как это работает</Link><Link href="/auth?mode=login">Войти в кабинет</Link></div>
+            <div><strong>Собственникам</strong><Link href="/landlords">Разместить квартиру</Link><Link href="/landlords#estimate">Оценить стоимость</Link><Link href="/owner">Кабинет собственника</Link></div>
+            <div><strong>Контакты</strong><a href="tel:+78432000000">+7 (843) 200-00-00</a><a href="mailto:hello@arendabez.ru">hello@arendabez.ru</a><span>Казань, Республика Татарстан</span></div>
+          </div>
+          <div className="site-footer__bottom"><span>© 2026 Аренда БЕЗ</span><span>Пользовательское соглашение · Конфиденциальность</span></div>
+        </footer>
+      )}
     </div>
   );
 }

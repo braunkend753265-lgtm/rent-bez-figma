@@ -14,3 +14,7 @@
 | SEO-база | Реализована | Русский `lang`, route-level title/description, `robots.txt`, favicon и тематический `theme-color`. |
 
 Production-сборка выдаёт стандартное предупреждение Vite о chunk больше 500 kB; сжатый JavaScript составляет 176.59 kB и остаётся в пределах установленного для стартового bundle бюджета 200 kB. Отложенная маршрутизация может быть добавлена как дальнейшая оптимизация, когда появятся реальные метрики загрузки.
+
+## Desktop-корректировка
+
+После повторного прохода desktop-фреймов Figma исправления изолированы в `@media (min-width: 961px)`. Проверены `/search`, `/listing/baumana-1`, `/rent`, `/landlords` и `/auth` при 1280 px; также `/search`, `/landlords` и `/auth?mode=register` при целевой ширине 1171 px. Отдельно повторно просмотрены mobile-маршруты `/search`, `/rent`, `/landlords` и `/auth` при 375 px. Финальные `pnpm test`, `pnpm check` и `pnpm build` прошли успешно.

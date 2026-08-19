@@ -151,6 +151,25 @@ export const properties: Property[] = [
     images: [propertyImage.bedroom, propertyImage.kitchen, propertyImage.living],
     coordinates: { x: 78, y: 68 },
   },
+  {
+    id: "chistopolskaya-studio",
+    title: "Студия, Ново-Савиновский район",
+    district: "Ново-Савиновский район",
+    address: "ул. Чистопольская, 66",
+    metro: "Козья слобода · 14 мин",
+    rooms: 1,
+    area: 28,
+    floor: "11 из 18",
+    price: 27000,
+    status: "available",
+    verified: true,
+    deposit: 0,
+    description:
+      "Компактная студия с готовой мебелью и прозрачными условиями по ежемесячной оплате.",
+    amenities: ["Интернет", "Стиральная машина", "Кондиционер", "Лифт"],
+    images: [propertyImage.kitchen, propertyImage.living, propertyImage.bedroom],
+    coordinates: { x: 56, y: 56 },
+  },
 ];
 
 export const availabilityLabel: Record<Availability, string> = {

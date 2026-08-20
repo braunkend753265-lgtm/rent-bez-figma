@@ -8,10 +8,10 @@ import { Seo } from "@/components/Seo";
 import { useCity } from "@/contexts/CityContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
 import { filterProperties, properties, type PropertyFilters } from "@/lib/domain";
+import { DEFAULT_SEARCH_FILTERS, filtersFromSearch } from "@/lib/searchFilters";
 
-const DEFAULT_FILTERS: PropertyFilters = { query: "", rooms: "all", minPrice: 0, maxPrice: 100000, minArea: 0, maxArea: 200, rentalType: "long", availability: "all" };
-const numberParam = (params: URLSearchParams, key: string, fallback: number) => { const value = Number(params.get(key)); return Number.isFinite(value) && value >= 0 ? value : fallback; };
-function filtersFromLocation(): PropertyFilters { const params = new URLSearchParams(window.location.search); const rooms = params.get("rooms"); return { query: params.get("q") ?? "", rooms: rooms === "1" || rooms === "2" || rooms === "3" ? rooms : "all", minPrice: numberParam(params, "minPrice", 0), maxPrice: numberParam(params, "max", 100000), minArea: numberParam(params, "minArea", 0), maxArea: numberParam(params, "maxArea", 200), rentalType: params.get("term") === "daily" ? "daily" : "long", availability: "all" }; }
+const DEFAULT_FILTERS = DEFAULT_SEARCH_FILTERS;
+function filtersFromLocation(): PropertyFilters { return filtersFromSearch(window.location.search); }
 
 export default function SearchPage() {
   const [, navigate] = useLocation();

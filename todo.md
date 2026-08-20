@@ -75,3 +75,5 @@
 - [x] Проверить Docker-конфигурацию и локальную production-сборку.
 - [x] Отправить проверенные изменения в ветку `main` GitHub-репозиторий.
 - [ ] Выполнить фактические `docker build` и `docker run` на машине с установленным Docker Engine; в текущей среде подтверждены структура Dockerfile и production-сборка приложения, но Docker Engine отсутствует.
+- [ ] Подготовить Docker Engine в текущей среде, если это поддерживается, и выполнить Docker-проверку самостоятельно.
+- [ ] Добавить GitHub Actions workflow, который выполняет Docker build и тестовый запуск контейнера на GitHub-hosted runner.

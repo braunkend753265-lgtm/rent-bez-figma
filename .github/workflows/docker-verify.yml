@@ -1,0 +1,48 @@
+name: Verify Docker image
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "for_you_Egor"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "client/**"
+      - "server/**"
+      - "shared/**"
+      - "drizzle/**"
+      - "vite.config.ts"
+      - ".github/workflows/docker-verify.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  docker-smoke-test:
+    name: Build and start Docker image
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -f for_you_Egor -t rent-bez:verify .
+
+      - name: Start container and verify HTTP response
+        run: |
+          docker run --rm -d --name rent-bez-smoke -p 3000:3000 \
+            -e PORT=3000 \
+            -e NODE_ENV=production \
+            rent-bez:verify
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error http://127.0.0.1:3000/ > /dev/null; then
+              echo "Container answered HTTP successfully."
+              docker logs rent-bez-smoke
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs rent-bez-smoke
+          exit 1

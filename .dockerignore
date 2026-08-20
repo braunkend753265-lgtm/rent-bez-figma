@@ -1,0 +1,27 @@
+# Dependencies are installed inside the Docker image.
+node_modules/
+.pnpm-store/
+
+# Build artifacts are produced inside the Docker image.
+dist/
+build/
+
+# Local VCS, logs, caches and editor state are not needed at runtime.
+.git/
+.manus-logs/
+.vite/
+.turbo/
+coverage/
+test-results/
+playwright-report/
+.vscode/
+.idea/
+
+# Local environment files and credentials must not enter the image context.
+.env
+.env.*
+
+# Local Docker and hosting state.
+.docker/
+.vercel/
+.netlify/

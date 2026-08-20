@@ -1,0 +1,287 @@
+[2026-08-19T22:53:58.718Z] Starting dev server with command: pnpm run dev
+[2026-08-19T22:53:59.816Z] > rent-bez-figma@1.0.0 dev /home/ubuntu/rent-bez-figma
+[2026-08-19T22:53:59.816Z] > vite --host
+[2026-08-19T22:54:00.146Z] VITE v7.1.9  ready in 306 ms
+[2026-08-19T22:54:00.146Z] ➜  Local:   http://localhost:3000/
+[2026-08-19T22:54:00.147Z] ➜  Network: http://169.254.0.21:3000/
+[2026-08-19T23:24:30.569Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-19T23:25:57.656Z] 11:25:57 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-08-19T23:25:58.184Z] 11:25:58 PM [vite] (client) page reload index.html
+[2026-08-19T23:26:30.417Z] 11:26:30 PM [vite] (client) hmr update /src/index.css
+[2026-08-19T23:27:53.546Z] 11:27:53 PM [vite] (client) hmr update /src/components/PropertyMap.tsx, /src/index.css
+[2026-08-19T23:27:53.547Z] 11:27:53 PM [vite] (client) hmr update /src/index.css
+[2026-08-19T23:27:53.554Z] 11:27:53 PM [vite] (client) hmr update /src/index.css, /src/pages/AuthPage.tsx
+[2026-08-19T23:28:44.563Z] 11:28:44 PM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-19T23:28:45.166Z] 11:28:45 PM [vite] (client) hmr update /src/pages/ListingPage.tsx, /src/index.css
+[2026-08-19T23:29:40.689Z] 11:29:40 PM [vite] (client) hmr update /src/components/PropertyMap.tsx, /src/index.css
+[2026-08-19T23:45:09.222Z] 11:45:09 PM [vite] (client) hmr update /src/components/AppShell.tsx, /src/index.css
+[2026-08-19T23:45:09.359Z] 11:45:09 PM [vite] (client) hmr update /src/pages/ListingPage.tsx, /src/pages/SearchPage.tsx, /src/components/ApplicationDialog.tsx, /src/components/PropertyCard.tsx, /src/components/PropertyMap.tsx, /src/pages/MarketingPages.tsx, /src/pages/OwnerPage.tsx, /src/index.css
+[2026-08-19T23:45:10.731Z] 11:45:10 PM [vite] (client) hmr update /src/index.css, /src/pages/MarketingPages.tsx
+[2026-08-19T23:45:10.736Z] 11:45:10 PM [vite] (client) hmr update /src/index.css, /src/pages/AuthPage.tsx
+[2026-08-19T23:45:11.080Z] 11:45:11 PM [vite] (client) hmr update /src/index.css
+[2026-08-19T23:46:48.701Z] 11:46:48 PM [vite] (client) hmr update /src/index.css, /src/pages/AuthPage.tsx
+[2026-08-19T23:46:48.711Z] 11:46:48 PM [vite] (client) hmr update /src/index.css
+[2026-08-19T23:46:49.151Z] 11:46:49 PM [vite] (client) hmr update /src/index.css, /src/pages/MarketingPages.tsx
+[2026-08-19T23:48:02.321Z] 11:48:02 PM [vite] (client) hmr update /src/index.css, /src/pages/AuthPage.tsx
+[2026-08-19T23:48:02.357Z] 11:48:02 PM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:00:21.334Z] 12:00:21 AM [vite] (client) hmr update /src/pages/ListingPage.tsx, /src/pages/SearchPage.tsx, /src/components/ApplicationDialog.tsx, /src/components/PropertyCard.tsx, /src/components/PropertyMap.tsx, /src/pages/MarketingPages.tsx, /src/pages/OwnerPage.tsx, /src/index.css
+[2026-08-20T00:00:21.335Z] 12:00:21 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:00:21.362Z] 12:00:21 AM [vite] (client) hmr update /src/components/PropertyCard.tsx, /src/index.css
+[2026-08-20T00:00:21.819Z] 12:00:21 AM [vite] (client) hmr update /src/pages/ListingPage.tsx, /src/index.css
+[2026-08-20T00:02:07.417Z] 12:02:07 AM [vite] (client) hmr update /src/components/PropertyMap.tsx, /src/index.css
+[2026-08-20T00:02:07.417Z] 12:02:07 AM [vite] (client) hmr update /src/components/AppShell.tsx, /src/index.css
+[2026-08-20T00:02:07.867Z] 12:02:07 AM [vite] (client) hmr update /src/index.css, /src/pages/AuthPage.tsx
+[2026-08-20T00:02:51.153Z] 12:02:51 AM [vite] (client) hmr update /src/index.css, /src/pages/MarketingPages.tsx
+[2026-08-20T00:03:07.186Z] 12:03:07 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:07:37.654Z] ELIFECYCLE  Command failed.
+[2026-08-20T00:07:37.669Z] Dev server exited with code -1
+[2026-08-20T00:07:38.795Z] Starting dev server with command: pnpm run dev
+[2026-08-20T00:07:39.115Z] > rent-bez-figma@1.0.0 dev /home/ubuntu/rent-bez-figma
+[2026-08-20T00:07:39.115Z] > NODE_ENV=development tsx watch server/_core/index.ts
+[2026-08-20T00:07:39.399Z] node:internal/modules/run_main:122
+[2026-08-20T00:07:39.399Z] triggerUncaughtException(
+[2026-08-20T00:07:39.399Z] ^
+[2026-08-20T00:07:39.399Z] Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'dotenv' imported from /home/ubuntu/rent-bez-figma/server/_core/index.ts
+[2026-08-20T00:07:39.399Z] at packageResolve (node:internal/modules/esm/resolve:857:9)
+[2026-08-20T00:07:39.399Z] at moduleResolve (node:internal/modules/esm/resolve:926:18)
+[2026-08-20T00:07:39.399Z] at defaultResolve (node:internal/modules/esm/resolve:1056:11)
+[2026-08-20T00:07:39.399Z] at nextResolve (node:internal/modules/esm/hooks:748:28)
+[2026-08-20T00:07:39.399Z] at resolveBase (file:///home/ubuntu/rent-bez-figma/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1787184459324:2:3744)
+[2026-08-20T00:07:39.399Z] at resolveDirectory (file:///home/ubuntu/rent-bez-figma/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1787184459324:2:4243)
+[2026-08-20T00:07:39.399Z] at resolveTsPaths (file:///home/ubuntu/rent-bez-figma/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1787184459324:2:4984)
+[2026-08-20T00:07:39.399Z] at async resolve (file:///home/ubuntu/rent-bez-figma/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1787184459324:2:5355)
+[2026-08-20T00:07:39.399Z] at async nextResolve (node:internal/modules/esm/hooks:748:22)
+[2026-08-20T00:07:39.399Z] at async Hooks.resolve (node:internal/modules/esm/hooks:240:24) {
+[2026-08-20T00:07:39.399Z] code: 'ERR_MODULE_NOT_FOUND'
+[2026-08-20T00:07:39.399Z] }
+[2026-08-20T00:07:39.399Z] Node.js v22.13.0
+[2026-08-20T00:09:48.127Z] ELIFECYCLE  Command failed.
+[2026-08-20T00:09:48.135Z] Dev server exited with code -1
+[2026-08-20T00:09:49.231Z] Starting dev server with command: pnpm run dev
+[2026-08-20T00:09:49.605Z] > rent-bez-figma@1.0.0 dev /home/ubuntu/rent-bez-figma
+[2026-08-20T00:09:49.605Z] > NODE_ENV=development tsx watch server/_core/index.ts
+[2026-08-20T00:09:50.441Z] [OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:09:50.552Z] 12:09:50 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+[2026-08-20T00:09:50.577Z] Server running on http://localhost:3000/
+[2026-08-20T00:09:51.105Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-20T00:14:10.165Z] 12:14:10 AM [vite] (client) hmr update /src/components/AppShell.tsx, /src/index.css
+[2026-08-20T00:14:10.178Z] 12:14:10 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-08-20T00:14:10.186Z] 12:14:10 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/pages/OwnerPage.tsx, /src/pages/MarketingPages.tsx, /src/pages/ListingPage.tsx, /src/components/PropertyCard.tsx, /src/components/PropertyMap.tsx, /src/components/ApplicationDialog.tsx, /src/index.css
+[2026-08-20T00:14:10.812Z] 12:14:10 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:14:11.592Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.592Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.592Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.592Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] 11 |  } as const;
+[2026-08-20T00:14:11.592Z] 12 |
+[2026-08-20T00:14:11.592Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.592Z] |                                                                 ^
+[2026-08-20T00:14:11.592Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.592Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.592Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.592Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.592Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.592Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] 11 |  } as const;
+[2026-08-20T00:14:11.592Z] 12 |
+[2026-08-20T00:14:11.592Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.592Z] |                                                                 ^
+[2026-08-20T00:14:11.592Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.592Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.592Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.592Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.592Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.592Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] 11 |  } as const;
+[2026-08-20T00:14:11.592Z] 12 |
+[2026-08-20T00:14:11.592Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.592Z] |                                                                 ^
+[2026-08-20T00:14:11.592Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.592Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.592Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.592Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.592Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.592Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.592Z] 11 |  } as const;
+[2026-08-20T00:14:11.592Z] 12 |
+[2026-08-20T00:14:11.592Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.592Z] |                                                                 ^
+[2026-08-20T00:14:11.592Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.592Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.592Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.592Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.593Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.593Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.593Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.593Z] 11 |  } as const;
+[2026-08-20T00:14:11.593Z] 12 |
+[2026-08-20T00:14:11.593Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.593Z] |                                                                 ^
+[2026-08-20T00:14:11.593Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.593Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.593Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.593Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.593Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.593Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.593Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.593Z] 11 |  } as const;
+[2026-08-20T00:14:11.593Z] 12 |
+[2026-08-20T00:14:11.593Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.593Z] |                                                                 ^
+[2026-08-20T00:14:11.593Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.593Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.594Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.594Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.594Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.594Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.594Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.594Z] 11 |  } as const;
+[2026-08-20T00:14:11.594Z] 12 |
+[2026-08-20T00:14:11.594Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.594Z] |                                                                 ^
+[2026-08-20T00:14:11.594Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.594Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.752Z] 12:14:11 AM [vite] (client) hmr update /src/components/PropertyMap.tsx, /src/index.css
+[2026-08-20T00:14:11.801Z] 12:14:11 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:14:11.888Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.888Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.888Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.888Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.888Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.888Z] 11 |  } as const;
+[2026-08-20T00:14:11.889Z] 12 |
+[2026-08-20T00:14:11.889Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.889Z] |                                                                 ^
+[2026-08-20T00:14:11.889Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.889Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:11.895Z] 12:14:11 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+[2026-08-20T00:14:11.895Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:11.895Z] Plugin: vite:esbuild
+[2026-08-20T00:14:11.895Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:11.895Z] Expected ">" but found ")"
+[2026-08-20T00:14:11.895Z] 11 |  } as const;
+[2026-08-20T00:14:11.895Z] 12 |
+[2026-08-20T00:14:11.895Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:11.895Z] |                                                                 ^
+[2026-08-20T00:14:11.895Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:11.895Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:12.076Z] 12:14:12 AM [vite] Internal server error: Transform failed with 1 error:
+[2026-08-20T00:14:12.076Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:12.076Z] Plugin: vite:esbuild
+[2026-08-20T00:14:12.076Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:12.076Z] Expected ">" but found ")"
+[2026-08-20T00:14:12.076Z] 11 |  } as const;
+[2026-08-20T00:14:12.076Z] 12 |
+[2026-08-20T00:14:12.076Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:12.076Z] |                                                                 ^
+[2026-08-20T00:14:12.076Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:12.076Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:12.076Z] at failureErrorWithLog (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:1467:15)
+[2026-08-20T00:14:12.076Z] at /home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:736:50
+[2026-08-20T00:14:12.076Z] at responseCallbacks.<computed> (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:603:9)
+[2026-08-20T00:14:12.076Z] at handleIncomingPacket (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:658:12)
+[2026-08-20T00:14:12.076Z] at Socket.readFromStdout (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:581:7)
+[2026-08-20T00:14:12.076Z] at Socket.emit (node:events:524:28)
+[2026-08-20T00:14:12.076Z] at addChunk (node:internal/streams/readable:561:12)
+[2026-08-20T00:14:12.076Z] at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+[2026-08-20T00:14:12.076Z] at Readable.push (node:internal/streams/readable:392:5)
+[2026-08-20T00:14:12.076Z] at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2026-08-20T00:14:17.442Z] 12:14:17 AM [vite] Internal server error: Transform failed with 1 error:
+[2026-08-20T00:14:17.442Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:17.442Z] Plugin: vite:esbuild
+[2026-08-20T00:14:17.442Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:17.442Z] Expected ">" but found ")"
+[2026-08-20T00:14:17.442Z] 11 |  } as const;
+[2026-08-20T00:14:17.442Z] 12 |
+[2026-08-20T00:14:17.442Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:17.442Z] |                                                                 ^
+[2026-08-20T00:14:17.442Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:17.442Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:17.442Z] at failureErrorWithLog (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:1467:15)
+[2026-08-20T00:14:17.442Z] at /home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:736:50
+[2026-08-20T00:14:17.442Z] at responseCallbacks.<computed> (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:603:9)
+[2026-08-20T00:14:17.442Z] at handleIncomingPacket (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:658:12)
+[2026-08-20T00:14:17.442Z] at Socket.readFromStdout (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:581:7)
+[2026-08-20T00:14:17.442Z] at Socket.emit (node:events:524:28)
+[2026-08-20T00:14:17.442Z] at addChunk (node:internal/streams/readable:561:12)
+[2026-08-20T00:14:17.442Z] at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+[2026-08-20T00:14:17.442Z] at Readable.push (node:internal/streams/readable:392:5)
+[2026-08-20T00:14:17.442Z] at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2026-08-20T00:14:19.537Z] 12:14:19 AM [vite] Internal server error: Transform failed with 1 error:
+[2026-08-20T00:14:19.537Z] /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120: ERROR: Expected ">" but found ")"
+[2026-08-20T00:14:19.537Z] Plugin: vite:esbuild
+[2026-08-20T00:14:19.537Z] File: /home/ubuntu/rent-bez-figma/client/src/lib/domain.ts:13:120
+[2026-08-20T00:14:19.537Z] Expected ">" but found ")"
+[2026-08-20T00:14:19.537Z] 11 |  } as const;
+[2026-08-20T00:14:19.537Z] 12 |
+[2026-08-20T00:14:19.537Z] 13 |  ...tus"> & Partial<Pick<Property,"verified"|"deposit"|"status">): Property => ({ verified:true, deposit:0, status:"av...
+[2026-08-20T00:14:19.537Z] |                                                                 ^
+[2026-08-20T00:14:19.537Z] 14 |  export const properties:Property[] = [
+[2026-08-20T00:14:19.537Z] 15 |    make({id:"baumana-1",city:"kazan",title:"1-комнатная квартира на Баумана",district:"Вахитовский район, Казань",addr...
+[2026-08-20T00:14:19.537Z] at failureErrorWithLog (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:1467:15)
+[2026-08-20T00:14:19.537Z] at /home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:736:50
+[2026-08-20T00:14:19.537Z] at responseCallbacks.<computed> (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:603:9)
+[2026-08-20T00:14:19.537Z] at handleIncomingPacket (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:658:12)
+[2026-08-20T00:14:19.537Z] at Socket.readFromStdout (/home/ubuntu/rent-bez-figma/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:581:7)
+[2026-08-20T00:14:19.537Z] at Socket.emit (node:events:524:28)
+[2026-08-20T00:14:19.537Z] at addChunk (node:internal/streams/readable:561:12)
+[2026-08-20T00:14:19.537Z] at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+[2026-08-20T00:14:19.537Z] at Readable.push (node:internal/streams/readable:392:5)
+[2026-08-20T00:14:19.537Z] at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2026-08-20T00:14:49.499Z] 12:14:49 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/pages/OwnerPage.tsx, /src/pages/MarketingPages.tsx, /src/pages/ListingPage.tsx, /src/components/PropertyCard.tsx, /src/components/PropertyMap.tsx, /src/components/ApplicationDialog.tsx, /src/index.css
+[2026-08-20T00:18:39.478Z] 12:18:39 AM [tsx] change in ./server/_core/env.ts Restarting...
+[2026-08-20T00:18:40.377Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:18:40.499Z] Server running on http://localhost:3000/
+[2026-08-20T00:18:41.138Z] 12:18:41 AM [tsx] change in ./server/db.ts Restarting...
+[2026-08-20T00:18:42.033Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:18:42.141Z] Server running on http://localhost:3000/
+[2026-08-20T00:18:42.501Z] 12:18:42 AM [tsx] change in ./server/_core/context.ts Restarting...
+[2026-08-20T00:18:42.964Z] c12:18:42 AM [tsx] change in ./server/routers.ts Restarting...
+[2026-08-20T00:18:43.794Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:18:43.894Z] Server running on http://localhost:3000/
+[2026-08-20T00:18:45.604Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-20T00:19:33.777Z] 12:19:33 AM [tsx] change in ./server/db.ts Restarting...
+[2026-08-20T00:19:34.625Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:19:34.732Z] Server running on http://localhost:3000/
+[2026-08-20T00:19:36.445Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-20T00:20:23.211Z] 12:20:23 AM [vite] (client) hmr update /src/pages/AuthPage.tsx, /src/index.css
+[2026-08-20T00:20:23.240Z] 12:20:23 AM [vite] (client) hmr update /src/components/ApplicationDialog.tsx, /src/index.css
+[2026-08-20T00:22:02.093Z] 12:22:02 AM [vite] (client) hmr update /src/components/PropertyMap.tsx, /src/index.css
+[2026-08-20T00:22:02.099Z] 12:22:02 AM [vite] (client) hmr update /src/index.css, /src/components/Map.tsx
+[2026-08-20T00:22:02.118Z] 12:22:02 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:22:48.459Z] 12:22:48 AM [tsx] change in ./server/otp.ts Restarting...
+[2026-08-20T00:22:49.191Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:22:49.294Z] Server running on http://localhost:3000/
+[2026-08-20T00:22:49.785Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-20T00:24:45.421Z] 12:24:45 AM [vite] (client) hmr update /src/index.css, /src/components/Map.tsx
+[2026-08-20T00:24:45.908Z] 12:24:45 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:24:46.003Z] 12:24:46 AM [tsx] change in ./server/routers.ts Restarting...
+[2026-08-20T00:24:46.830Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-08-20T00:24:46.935Z] Server running on http://localhost:3000/
+[2026-08-20T00:24:49.186Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-08-20T00:25:49.585Z] 12:25:49 AM [vite] (client) hmr update /src/index.css, /src/components/PropertyMap.tsx
+[2026-08-20T00:25:49.627Z] 12:25:49 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:29:40.390Z] 12:29:40 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:30:32.408Z] 12:30:32 AM [vite] (client) hmr update /src/index.css, /src/pages/SearchPage.tsx, /src/pages/OwnerPage.tsx, /src/pages/ListingPage.tsx, /src/pages/MarketingPages.tsx, /src/components/PropertyCard.tsx, /src/components/PropertyMap.tsx, /src/components/ApplicationDialog.tsx
+[2026-08-20T00:34:02.481Z] 12:34:02 AM [vite] (client) hmr update /src/index.css, /src/components/PropertyMap.tsx
+[2026-08-20T00:34:03.144Z] 12:34:03 AM [vite] (client) hmr update /src/index.css, /src/components/PropertyCard.tsx
+[2026-08-20T00:34:03.726Z] 12:34:03 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+[2026-08-20T00:34:04.334Z] 12:34:04 AM [vite] (client) hmr update /src/pages/ListingPage.tsx, /src/index.css
+[2026-08-20T00:34:04.965Z] 12:34:04 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:34:05.619Z] 12:34:05 AM [vite] (client) hmr update /src/index.css
+[2026-08-20T00:34:18.520Z] 12:34:18 AM [vite] (client) hmr update /src/index.css, /src/contexts/FavoritesContext.tsx
+[2026-08-20T00:34:18.604Z] 12:34:18 AM [vite] (client) hmr update /src/index.css, /src/components/YandexMap.tsx
+[2026-08-20T00:34:19.554Z] 12:34:19 AM [vite] (client) hmr invalidate /src/contexts/FavoritesContext.tsx Could not Fast Refresh ("useFavorites" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-20T00:34:19.555Z] 12:34:19 AM [vite] (client) hmr update /src/components/PropertyCard.tsx, /src/App.tsx, /src/pages/ListingPage.tsx, /src/pages/SearchPage.tsx
+[2026-08-20T00:35:13.043Z] 12:35:13 AM [vite] (client) hmr update /src/index.css, /src/contexts/FavoritesContext.tsx
+[2026-08-20T00:35:13.794Z] 12:35:13 AM [vite] (client) hmr invalidate /src/contexts/FavoritesContext.tsx Could not Fast Refresh ("useFavorites" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2026-08-20T00:35:13.794Z] 12:35:13 AM [vite] (client) hmr update /src/components/PropertyCard.tsx, /src/App.tsx, /src/pages/ListingPage.tsx, /src/pages/SearchPage.tsx
+[2026-08-20T00:44:53.588Z] 12:44:53 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:48:20.145Z] 12:48:20 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:48:46.951Z] 12:48:46 AM [vite] (client) hmr update /src/pages/SearchPage.tsx, /src/index.css
+[2026-08-20T00:49:41.113Z] 12:49:41 AM [vite] (client) hmr update /src/index.css, /src/pages/search-filters.css
+[2026-08-20T00:50:25.849Z] 12:50:25 AM [vite] (client) hmr update /src/index.css, /src/pages/search-filters.css

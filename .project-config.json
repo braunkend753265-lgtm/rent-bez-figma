@@ -1,0 +1,42 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "db",
+    "server",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://46MUDvEvv9DGfy2.root:7s45P5wqndhV4wKIjxX0@gateway03.us-east-1.prod.aws.tidbcloud.com:4000/44cpEhxpR9MzuhNgew6SQM?ssl={\"rejectUnauthorized\":true}",
+    "DRIZZLE_DATABASE_URL": "mysql://46MUDvEvv9DGfy2.root:7s45P5wqndhV4wKIjxX0@gateway03.us-east-1.prod.aws.tidbcloud.com:4000/44cpEhxpR9MzuhNgew6SQM?ssl={\"rejectUnauthorized\":true}",
+    "MANUS_WEBDEV_PROJECT_ID": "44cpEhxpR9MzuhNgew6SQM"
+  },
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/44cpEhxpR9MzuhNgew6SQM.git",
+    "expiration": "2026-08-20T22:53:52.818Z",
+    "token": "art_v2_x_5bffd984a7f4663ac316e858a8a912dfbec66621?expires=1787266432",
+    "backend": "GIT_BACKEND_ARTIFACTS"
+  },
+  "name": "rent-bez-figma",
+  "path": "/home/ubuntu/rent-bez-figma",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "S6bzfRL6ccXTksXHbzo68N",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "iNkeynZEZpHjtqybDrLqo4",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Dima Sorozhkin",
+    "OWNER_OPEN_ID": "3M4bmjMbaSR6BHBRbRNtaP",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "26a8e707-efd8-4952-9ec3-f95f85dccee7",
+    "VITE_APP_ID": "44cpEhxpR9MzuhNgew6SQM",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663893201396/LGzmNJkrQwoYwFTe.png",
+    "VITE_APP_TITLE": "Аренда БЕЗ",
+    "VITE_FRONTEND_FORGE_API_KEY": "Gr88wAXNUgjDpfEJhP7MVf",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}

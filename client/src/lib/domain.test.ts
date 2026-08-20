@@ -25,6 +25,36 @@ describe("filterProperties", () => {
 
     expect(result.map((property) => property.id)).toContain("baumana-1");
   });
+
+  it("combines price and area ranges with the selected room count", () => {
+    const result = filterProperties(properties, {
+      query: "",
+      rooms: "2",
+      minPrice: 30000,
+      maxPrice: 60000,
+      minArea: 50,
+      maxArea: 60,
+      rentalType: "long",
+      availability: "all",
+    });
+
+    expect(result.map((property) => property.id)).toEqual(["yamasheva-2", "sibirsky-2", "komendantsky-2"]);
+  });
+
+  it("returns an empty result when a range excludes every property", () => {
+    const result = filterProperties(properties, {
+      query: "",
+      rooms: "all",
+      minPrice: 90000,
+      maxPrice: 100000,
+      minArea: 20,
+      maxArea: 200,
+      rentalType: "long",
+      availability: "all",
+    });
+
+    expect(result).toEqual([]);
+  });
 });
 
 describe("calculateOwnerEconomics", () => {

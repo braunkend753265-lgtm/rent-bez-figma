@@ -10,6 +10,7 @@ import { LandlordsPage, RentPage } from "./pages/MarketingPages";
 import AuthPage from "./pages/AuthPage";
 import OwnerPage from "./pages/OwnerPage";
 import { CityProvider } from "./contexts/CityContext";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -41,10 +42,10 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <CityProvider><TooltipProvider>
+        <CityProvider><FavoritesProvider><TooltipProvider>
           <Toaster />
           <Router />
-        </TooltipProvider></CityProvider>
+        </TooltipProvider></FavoritesProvider></CityProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

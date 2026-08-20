@@ -1,15 +1,17 @@
 /** Figma fidelity: светлый интерфейс Аренда БЕЗ; галерея объекта, ясные условия, сервисный сбор и sticky CTA. */
-import { Check, ChevronLeft, CircleCheck, MapPin, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { Check, ChevronLeft, CircleCheck, Heart, MapPin, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "wouter";
 import { AppShell } from "@/components/AppShell";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
 import { Seo } from "@/components/Seo";
 import { availabilityLabel, formatRubles, properties } from "@/lib/domain";
 import { useState } from "react";
+import { useFavorites } from "@/contexts/FavoritesContext";
 
 export default function ListingPage({ id }: { id: string }) {
   const property = properties.find((item) => item.id === id);
   const [applicationOpen, setApplicationOpen] = useState(false);
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!property) {
     return (
@@ -23,7 +25,7 @@ export default function ListingPage({ id }: { id: string }) {
       <Seo title={property.title} description={`${property.title}, ${property.district}. ${formatRubles(property.price)} в месяц; проверенные условия аренды в Казани.`} />
       <section className="listing-page">
         <div className="listing-breadcrumbs"><Link href="/search"><ChevronLeft size={16} aria-hidden="true" /> Все квартиры</Link><span>/</span><span>{property.district}</span></div>
-        <div className="listing-topline"><div><p className="eyebrow">{availabilityLabel[property.status]} · Без залога</p><h1>{property.title}</h1><p className="listing-location"><Star size={15} fill="currentColor" aria-hidden="true" /> {property.rating} ({property.reviews} отзывов) · {property.district}</p><p className="listing-location"><MapPin size={16} aria-hidden="true" /> {property.address} · {property.area} м² · {property.floor} эт.</p></div><span className="verified-label"><ShieldCheck size={17} aria-hidden="true" /> Проверено</span></div>
+        <div className="listing-topline"><div><p className="eyebrow">{availabilityLabel[property.status]} · Без залога</p><h1>{property.title}</h1><p className="listing-location"><Star size={15} fill="currentColor" aria-hidden="true" /> {property.rating} ({property.reviews} отзывов) · {property.district}</p><p className="listing-location"><MapPin size={16} aria-hidden="true" /> {property.address} · {property.area} м² · {property.floor} эт.</p></div><div className="listing-topline__actions"><button type="button" className={`favorite-button favorite-button--listing ${isFavorite(property.id) ? "is-saved" : ""}`} aria-label={isFavorite(property.id) ? "Убрать из избранного" : "Добавить в избранное"} aria-pressed={isFavorite(property.id)} onClick={() => toggleFavorite(property.id)}><Heart size={19} fill={isFavorite(property.id) ? "currentColor" : "none"} aria-hidden="true" /></button><span className="verified-label"><ShieldCheck size={17} aria-hidden="true" /> Проверено</span></div></div>
         <div className="listing-layout">
           <article className="listing-content">
             <div className="listing-gallery">

@@ -74,6 +74,6 @@
 - [x] Добавить файл `for_you_Egor` с воспроизводимой Docker-сборкой и запуском приложения.
 - [x] Проверить Docker-конфигурацию и локальную production-сборку.
 - [x] Отправить проверенные изменения в ветку `main` GitHub-репозиторий.
-- [ ] Выполнить фактические `docker build` и `docker run` на машине с установленным Docker Engine; в текущей среде подтверждены структура Dockerfile и production-сборка приложения, но Docker Engine отсутствует.
-- [ ] Подготовить Docker Engine в текущей среде, если это поддерживается, и выполнить Docker-проверку самостоятельно.
-- [ ] Добавить GitHub Actions workflow, который выполняет Docker build и тестовый запуск контейнера на GitHub-hosted runner.
+- [x] Выполнить фактические `docker build` и `docker run` на машине с установленным Docker Engine: GitHub-hosted runner успешно собрал образ, запустил контейнер и подтвердил HTTP-ответ.
+- [x] Проверить доступность Docker Engine в текущей среде и выбрать поддерживаемый способ самостоятельной Docker-проверки: Docker Engine отсутствует, поэтому использован GitHub-hosted runner.
+- [x] Добавить GitHub Actions workflow, который выполняет Docker build и тестовый запуск контейнера на GitHub-hosted runner.

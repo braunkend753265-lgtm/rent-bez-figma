@@ -52,7 +52,7 @@ docker run --rm -p 3000:3000 --env-file .env rent-bez:local
 
 > Docker Engine в текущей среде разработки отсутствует, поэтому локальная Docker-сборка должна быть запущена на машине с установленным Docker. Конфигурация проверена структурно, а production-сборка проекта проверена командой `pnpm build`.
 
-После отправки в `main` GitHub Actions самостоятельно выполняет `docker build -f for_you_Egor` и smoke test контейнера через HTTP. Workflow можно также запустить вручную во вкладке **Actions** репозитория.
+После отправки в `main` GitHub Actions самостоятельно выполняет `docker build -f for_you_Egor` и smoke test контейнера через HTTP. Первая фактическая проверка на GitHub-hosted runner завершилась успешно: образ собран, контейнер запущен и ответил на HTTP-запрос. Проверяемая запись о запуске доступна в [docs/DOCKER_SMOKE_TEST.md](docs/DOCKER_SMOKE_TEST.md). Workflow можно также запустить вручную во вкладке **Actions** репозитория.
 
 ## Маршруты
 

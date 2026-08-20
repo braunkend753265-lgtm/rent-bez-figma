@@ -1,0 +1,17 @@
+# Подтверждение Docker smoke test
+
+> **Статус: успешно.** Docker-сборка и запуск контейнера выполнены на GitHub-hosted runner, так как Docker Engine недоступен в текущей среде разработки.
+
+| Поле | Значение |
+|---|---|
+| Workflow | `Verify Docker image` |
+| Run ID | `32319634992` |
+| Статус | `completed` |
+| Итог | `success` |
+| Commit | `06e95a0a65f5b1766adcad8952ce784d944db5d3` |
+| Запуск | [GitHub Actions run 32319634992](https://github.com/braunkend753265-lgtm/rent-bez-figma/actions/runs/32319634992) |
+| Время завершения | 2026-08-20 01:04:35 UTC |
+
+Workflow собрал образ командой `docker build -f for_you_Egor -t rent-bez:verify .`, запустил контейнер с портом `3000` и подтвердил успешный HTTP-ответ на `http://127.0.0.1:3000/`.
+
+Повторная проверка запускается автоматически при изменениях Docker-конфигурации или исходного кода в `main`, а также вручную через GitHub Actions.

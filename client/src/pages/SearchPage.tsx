@@ -1,5 +1,5 @@
 /** Figma fidelity: светлый интерфейс Аренда БЕЗ; desktop-каталог с картой и mobile-последовательность «фильтры → карта → список». */
-import { ChevronDown, ListFilter, Map, Search, SlidersHorizontal } from "lucide-react";
+import { ChevronDown, List, Map, Search, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import { useLocation } from "wouter";
 import { AppShell } from "@/components/AppShell";
@@ -26,7 +26,7 @@ function filtersFromLocation(): PropertyFilters {
 export default function SearchPage() {
   const [, navigate] = useLocation();
   const [filters, setFilters] = useState<PropertyFilters>(filtersFromLocation);
-  const [mapVisible, setMapVisible] = useState(true);
+  const [view, setView] = useState<"split" | "list" | "map">("split");
   const results = useMemo(() => filterProperties(properties, filters), [filters]);
 
   function updateFilters(partial: Partial<PropertyFilters>) {
@@ -68,16 +68,13 @@ export default function SearchPage() {
             </select>
             <ChevronDown size={16} aria-hidden="true" />
           </label>
-          <button type="button" className="map-toggle" onClick={() => setMapVisible((value) => !value)} aria-pressed={mapVisible}>
-            {mapVisible ? <Map size={17} aria-hidden="true" /> : <ListFilter size={17} aria-hidden="true" />}
-            {mapVisible ? "Карта" : "Список"}
-          </button>
+          <div className="view-toggle" role="group" aria-label="Режим просмотра"><button type="button" className={view !== "map" ? "is-active" : ""} onClick={() => setView("list")}><List size={16} aria-hidden="true" /> Список</button><button type="button" className={view !== "list" ? "is-active" : ""} onClick={() => setView("map")}><Map size={16} aria-hidden="true" /> Карта</button></div>
         </div>
 
-        <div className="search-layout">
-          <section className="search-results" aria-labelledby="results-heading">
+        <div className={`search-layout search-layout--${view}`}>
+          {view !== "map" && <section className="search-results" aria-labelledby="results-heading">
             <div className="results-heading">
-              <div><p className="eyebrow">Проверенные квартиры</p><h1 id="results-heading">{results.length} {results.length === 1 ? "вариант" : "варианта"} в Казани</h1></div>
+              <div><p className="eyebrow">Проверенные квартиры</p><h1 id="results-heading">{results.length} {results.length === 1 ? "квартира" : "квартир"} в Казани</h1></div>
               <button type="button" className="filter-summary"><SlidersHorizontal size={16} aria-hidden="true" /> Фильтры</button>
             </div>
             {results.length ? (
@@ -92,8 +89,8 @@ export default function SearchPage() {
                 <button type="button" className="button button--secondary" onClick={() => updateFilters(DEFAULT_FILTERS)}>Сбросить фильтры</button>
               </div>
             )}
-          </section>
-          {mapVisible && <PropertyMap properties={results} />}
+          </section>}
+          {view !== "list" && <PropertyMap properties={results} />}
         </div>
       </section>
     </AppShell>

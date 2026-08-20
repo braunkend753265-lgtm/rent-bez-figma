@@ -1,5 +1,5 @@
 /** Figma fidelity: светлый интерфейс Аренда БЕЗ; галерея объекта, ясные условия, сервисный сбор и sticky CTA. */
-import { Check, ChevronLeft, CircleCheck, MapPin, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, ChevronLeft, CircleCheck, MapPin, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "wouter";
 import { AppShell } from "@/components/AppShell";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
@@ -23,21 +23,21 @@ export default function ListingPage({ id }: { id: string }) {
       <Seo title={property.title} description={`${property.title}, ${property.district}. ${formatRubles(property.price)} в месяц; проверенные условия аренды в Казани.`} />
       <section className="listing-page">
         <div className="listing-breadcrumbs"><Link href="/search"><ChevronLeft size={16} aria-hidden="true" /> Все квартиры</Link><span>/</span><span>{property.district}</span></div>
-        <div className="listing-topline"><div><p className="eyebrow">{availabilityLabel[property.status]}</p><h1>{property.title}</h1><p className="listing-location"><MapPin size={16} aria-hidden="true" /> {property.address} · {property.metro}</p></div><span className="verified-label"><ShieldCheck size={17} aria-hidden="true" /> Проверено сервисом</span></div>
+        <div className="listing-topline"><div><p className="eyebrow">{availabilityLabel[property.status]} · Без залога</p><h1>{property.title}</h1><p className="listing-location"><Star size={15} fill="currentColor" aria-hidden="true" /> {property.rating} ({property.reviews} отзывов) · {property.district}</p><p className="listing-location"><MapPin size={16} aria-hidden="true" /> {property.address} · {property.area} м² · {property.floor} эт.</p></div><span className="verified-label"><ShieldCheck size={17} aria-hidden="true" /> Проверено</span></div>
         <div className="listing-layout">
           <article className="listing-content">
             <div className="listing-gallery">
               <img src={property.images[0]} width="1200" height="700" fetchPriority="high" alt={`Главное фото: ${property.title}`} className="listing-gallery__main" />
               <div className="listing-gallery__side"><img src={property.images[1]} width="600" height="400" loading="lazy" alt={`Фото кухни: ${property.title}`} /><img src={property.images[2]} width="600" height="400" loading="lazy" alt={`Фото спальни: ${property.title}`} /></div>
             </div>
-            <div className="facts-row"><span>{property.rooms} комнаты</span><span>{property.area} м²</span><span>{property.floor} этаж</span><span>{property.metro}</span></div>
+            <div className="facts-row"><span>Площадь: {property.area} м²</span><span>Этаж: {property.floor}</span><span>Комнат: {property.rooms}</span><span>Метро: {property.metro}</span></div>
             <section className="listing-section"><h2>О квартире</h2><p>{property.description}</p></section>
             <section className="listing-section"><h2>Что есть в квартире</h2><ul className="amenity-list">{property.amenities.map((amenity) => <li key={amenity}><Check size={16} aria-hidden="true" /> {amenity}</li>)}</ul></section>
-            <section className="listing-section conditions"><h2>Условия аренды</h2><dl><div><dt>Арендная плата</dt><dd>{formatRubles(property.price)} в месяц</dd></div><div><dt>Сервисный сбор</dt><dd>{formatRubles(Math.round(property.price * 0.1))} в месяц</dd></div><div><dt>Залог при заселении</dt><dd>{property.deposit === 0 ? "0 ₽" : formatRubles(property.deposit)}</dd></div><div><dt>Договор</dt><dd>Онлайн, с понятными условиями</dd></div></dl></section>
-            <section className="listing-section listing-guarantee"><Sparkles size={20} aria-hidden="true" /><div><h2>Без лишней комиссии и неопределённости</h2><p>Сервис проверяет объект, помогает с показом и остаётся точкой поддержки после заселения.</p></div></section>
+            <section className="listing-section conditions"><h2>Условия аренды</h2><dl><div><dt>Арендная плата</dt><dd>{formatRubles(property.price)}/мес</dd></div><div><dt>Сервисный сбор</dt><dd>{formatRubles(Math.round(property.price * 0.1))}/мес</dd></div><div><dt>Залог при заселении</dt><dd>{property.deposit === 0 ? "0 ₽" : formatRubles(property.deposit)}</dd></div><div><dt>Срок аренды</dt><dd>от 6 месяцев</dd></div><div><dt>Договор</dt><dd>Онлайн, без нотариуса</dd></div><div><dt>Коммунальные услуги</dt><dd>По счётчикам</dd></div></dl></section>
+            <section className="listing-section listing-guarantee"><Sparkles size={20} aria-hidden="true" /><div><h2>Договор с каждым арендатором</h2><p>Понятный, предсказуемый процесс без сюрпризов. Условия зафиксированы онлайн.</p></div></section>
             <section className="listing-section location-panel"><h2>Расположение</h2><div className="location-panel__map"><MapPin size={20} aria-hidden="true" /><span>{property.address}</span></div></section>
           </article>
-          <aside className="price-card"><p className="price-card__main">{formatRubles(property.price)} <span>/ мес</span></p><p className="price-card__total">Итого с сервисом: {formatRubles(Math.round(property.price * 1.1))}</p><ul><li><CircleCheck size={16} aria-hidden="true" /> договор и условия прозрачны</li><li><CircleCheck size={16} aria-hidden="true" /> без залога</li><li><CircleCheck size={16} aria-hidden="true" /> показ проводит менеджер</li></ul>{availableForApplication ? <button type="button" className="button button--primary button--wide" onClick={() => setApplicationOpen(true)}>Оставить заявку</button> : <button type="button" className="button button--secondary button--wide" disabled>Квартира уже сдана</button>}<p className="form-note">Предварительная анкета занимает до 2 минут.</p></aside>
+          <aside className="price-card"><p className="price-card__main">{formatRubles(property.price)} <span>/мес</span></p><p className="price-card__total">+ {formatRubles(Math.round(property.price * 0.1))} сервисный сбор</p><ul><li><CircleCheck size={16} aria-hidden="true" /> без залога — 0 ₽ при заселении</li><li><CircleCheck size={16} aria-hidden="true" /> квартира проверена сервисом</li><li><CircleCheck size={16} aria-hidden="true" /> договор онлайн</li></ul>{availableForApplication ? <button type="button" className="button button--primary button--wide" onClick={() => setApplicationOpen(true)}>Оставить заявку</button> : <button type="button" className="button button--secondary button--wide" disabled>Квартира уже сдана</button>}<p className="form-note">Ответим в течение часа в рабочее время.</p></aside>
         </div>
       </section>
       {applicationOpen && <ApplicationDialog property={property} onClose={() => setApplicationOpen(false)} />}

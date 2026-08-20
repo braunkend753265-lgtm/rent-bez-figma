@@ -71,13 +71,13 @@ export function AppShell({
                 <img src={logoUrl} width="32" height="32" alt="" className="brand__mark" />
                 <span className="brand__name">Аренда БЕЗ</span>
               </Link>
-              <p>Аренда жилья с понятными условиями и сервисной поддержкой.</p>
+              <p>Долгосрочная аренда квартир в Казани без залога и комиссии риелтора.</p>
             </div>
             <div><strong>Арендаторам</strong><Link href="/search">Найти квартиру</Link><Link href="/rent">Как это работает</Link><Link href="/auth?mode=login">Войти в кабинет</Link></div>
-            <div><strong>Собственникам</strong><Link href="/landlords">Разместить квартиру</Link><Link href="/landlords#estimate">Оценить стоимость</Link><Link href="/owner">Кабинет собственника</Link></div>
+            <div><strong>Собственникам</strong><Link href="/landlords">Разместить квартиру</Link><Link href="/landlords#estimate">Оценить стоимость</Link><a href="#terms">Условия сотрудничества</a></div>
             <div><strong>Контакты</strong><a href="tel:+78432000000">+7 (843) 200-00-00</a><a href="mailto:hello@arendabez.ru">hello@arendabez.ru</a><span>Казань, Республика Татарстан</span></div>
           </div>
-          <div className="site-footer__bottom"><span>© 2026 Аренда БЕЗ</span><span>Пользовательское соглашение · Конфиденциальность</span></div>
+          <div className="site-footer__bottom"><span>© 2024 Аренда БЕЗ. Все права защищены.</span><span>Русский · ₽ RUB</span><span>Конфиденциальность · Условия · Реквизиты</span></div>
         </footer>
       )}
     </div>

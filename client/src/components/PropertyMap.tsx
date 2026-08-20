@@ -5,7 +5,7 @@ import { formatRubles, type Property } from "@/lib/domain";
 export function PropertyMap({ properties }: { properties: Property[] }) {
   return (
     <section className="property-map" aria-label="Карта объектов в Казани">
-      <div className="property-map__label">Казань · выбранные объекты</div>
+      <div className="property-map__label">Казань — интерактивная карта</div>
       <div className="map-fallback" aria-label="Расположение объектов на схематичной карте Казани">
         <span className="map-fallback__river" aria-hidden="true" />
         <span className="map-fallback__road map-fallback__road--one" aria-hidden="true" />

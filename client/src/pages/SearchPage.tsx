@@ -7,6 +7,7 @@ import { PropertyCard } from "@/components/PropertyCard";
 import { PropertyMap } from "@/components/PropertyMap";
 import { Seo } from "@/components/Seo";
 import { filterProperties, properties, type PropertyFilters } from "@/lib/domain";
+import { useCity } from "@/contexts/CityContext";
 
 const DEFAULT_FILTERS: PropertyFilters = { query: "", rooms: "all", maxPrice: 100000, rentalType: "long", availability: "all" };
 
@@ -27,12 +28,14 @@ export default function SearchPage() {
   const [, navigate] = useLocation();
   const [filters, setFilters] = useState<PropertyFilters>(filtersFromLocation);
   const [view, setView] = useState<"split" | "list" | "map">("split");
-  const results = useMemo(() => filterProperties(properties, filters), [filters]);
+  const { city, cityInfo } = useCity();
+  const results = useMemo(() => filterProperties(properties.filter((property) => property.city === city), filters), [city, filters]);
 
   function updateFilters(partial: Partial<PropertyFilters>) {
     const next = { ...filters, ...partial };
     setFilters(next);
     const params = new URLSearchParams();
+    params.set("city", city);
     if (next.query) params.set("q", next.query);
     if (next.rooms !== "all") params.set("rooms", next.rooms);
     if (next.maxPrice !== 100000) params.set("max", String(next.maxPrice));
@@ -74,7 +77,7 @@ export default function SearchPage() {
         <div className={`search-layout search-layout--${view}`}>
           {view !== "map" && <section className="search-results" aria-labelledby="results-heading">
             <div className="results-heading">
-              <div><p className="eyebrow">Проверенные квартиры</p><h1 id="results-heading">{results.length} {results.length === 1 ? "квартира" : "квартир"} в Казани</h1></div>
+              <div><p className="eyebrow">Проверенные квартиры</p><h1 id="results-heading">{results.length} {results.length === 1 ? "квартира" : "квартир"} в {cityInfo.prepositional}</h1></div>
               <button type="button" className="filter-summary"><SlidersHorizontal size={16} aria-hidden="true" /> Фильтры</button>
             </div>
             {results.length ? (
@@ -90,7 +93,7 @@ export default function SearchPage() {
               </div>
             )}
           </section>}
-          {view !== "list" && <PropertyMap properties={results} />}
+          {view !== "list" && <PropertyMap city={city} properties={results} />}
         </div>
       </section>
     </AppShell>

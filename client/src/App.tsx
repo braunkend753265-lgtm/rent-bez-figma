@@ -9,9 +9,10 @@ import ListingPage from "./pages/ListingPage";
 import { LandlordsPage, RentPage } from "./pages/MarketingPages";
 import AuthPage from "./pages/AuthPage";
 import OwnerPage from "./pages/OwnerPage";
-
+import { CityProvider } from "./contexts/CityContext";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={SearchPage} />
@@ -40,10 +41,10 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <TooltipProvider>
+        <CityProvider><TooltipProvider>
           <Toaster />
           <Router />
-        </TooltipProvider>
+        </TooltipProvider></CityProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

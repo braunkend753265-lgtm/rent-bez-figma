@@ -2,6 +2,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useEffect, useId, useState } from "react";
+import { cities, useCity, type CityId } from "@/contexts/CityContext";
 
 const logoUrl = "/manus-storage/rentbez-logo_db53fdec.png";
 
@@ -15,6 +16,7 @@ export function AppShell({
   const [open, setOpen] = useState(false);
   const [location] = useLocation();
   const menuId = useId();
+  const { city, cityInfo, setCity } = useCity();
 
   useEffect(() => setOpen(false), [location]);
 
@@ -35,7 +37,7 @@ export function AppShell({
             <img src={logoUrl} width="36" height="36" alt="" className="brand__mark" />
             <span className="brand__name">Аренда БЕЗ</span>
           </Link>
-          <span className="city-control" aria-label="Выбранный город: Казань">Казань</span>
+          <label className="city-control"><span className="sr-only">Выберите город</span><select value={city} onChange={(event) => setCity(event.target.value as CityId)} aria-label="Выберите город">{Object.entries(cities).map(([id, item]) => <option value={id} key={id}>{item.name}</option>)}</select></label>
           <nav className="desktop-nav" aria-label="Основная навигация">
             <Link href="/search">Найти квартиру</Link>
             <Link href="/rent">Как это работает</Link>
@@ -55,6 +57,7 @@ export function AppShell({
         </div>
         {open && (
           <nav id={menuId} className="mobile-nav" aria-label="Мобильная навигация">
+            <label className="mobile-city-control">Город<select value={city} onChange={(event) => setCity(event.target.value as CityId)}>{Object.entries(cities).map(([id, item]) => <option value={id} key={id}>{item.name}</option>)}</select></label>
             <Link href="/search">Найти квартиру</Link>
             <Link href="/rent">Как это работает</Link>
             <Link href="/landlords">Собственникам</Link>
@@ -71,11 +74,11 @@ export function AppShell({
                 <img src={logoUrl} width="32" height="32" alt="" className="brand__mark" />
                 <span className="brand__name">Аренда БЕЗ</span>
               </Link>
-              <p>Долгосрочная аренда квартир в Казани без залога и комиссии риелтора.</p>
+              <p>Долгосрочная аренда квартир в {cityInfo.prepositional} без залога и комиссии риелтора.</p>
             </div>
             <div><strong>Арендаторам</strong><Link href="/search">Найти квартиру</Link><Link href="/rent">Как это работает</Link><Link href="/auth?mode=login">Войти в кабинет</Link></div>
             <div><strong>Собственникам</strong><Link href="/landlords">Разместить квартиру</Link><Link href="/landlords#estimate">Оценить стоимость</Link><a href="#terms">Условия сотрудничества</a></div>
-            <div><strong>Контакты</strong><a href="tel:+78432000000">+7 (843) 200-00-00</a><a href="mailto:hello@arendabez.ru">hello@arendabez.ru</a><span>Казань, Республика Татарстан</span></div>
+            <div><strong>Контакты</strong><a href="tel:+78432000000">+7 (843) 200-00-00</a><a href="mailto:hello@arendabez.ru">hello@arendabez.ru</a><span>{cityInfo.name}</span></div>
           </div>
           <div className="site-footer__bottom"><span>© 2024 Аренда БЕЗ. Все права защищены.</span><span>Русский · ₽ RUB</span><span>Конфиденциальность · Условия · Реквизиты</span></div>
         </footer>
